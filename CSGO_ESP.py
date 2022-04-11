@@ -2,9 +2,9 @@ from tracemalloc import stop
 from pymem import *
 from pymem.process import *
 
-dwEntityList = (0x4D4B104)
-dwGlowObjectManager = (0x5292F20)
-m_iGlowIndex = (0xA428)
+dwEntityList = (0x4DD245C)
+dwGlowObjectManager = (0x531B048)
+m_iGlowIndex = (0x10488)
 m_iTeamNum = (0xF4)
 
 
@@ -29,18 +29,18 @@ def main():
                 entity_glow = pm.read_int(entity + m_iGlowIndex)
 
                 if entity_team_id == 2:  # Terrorist
-                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x4, float(1))   # R
-                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x8, float(0))   # G
-                    pm.write_float(glow_manager + entity_glow * 0x38 + 0xC, float(0))   # B
-                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x10, float(1))  # Alpha
-                    pm.write_int(glow_manager + entity_glow * 0x38 + 0x24, 1)           # Enable glow
+                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x8, float(1))   # R
+                    pm.write_float(glow_manager + entity_glow * 0x38 + 0xC, float(0))   # G
+                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x10, float(0))   # B
+                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x14, float(1))  # Alpha
+                    pm.write_int(glow_manager + entity_glow * 0x38 + 0x28, 1)           # Enable glow
 
                 elif entity_team_id == 3:  # Counter-terrorist
-                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x4, float(0))   # R
-                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x8, float(0))   # G
-                    pm.write_float(glow_manager + entity_glow * 0x38 + 0xC, float(1))   # B
-                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x10, float(1))  # Alpha
-                    pm.write_int(glow_manager + entity_glow * 0x38 + 0x24, 1)           # Enable glow
+                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x8, float(0))   # R
+                    pm.write_float(glow_manager + entity_glow * 0x38 + 0xC, float(0))   # G
+                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x10, float(1))   # B
+                    pm.write_float(glow_manager + entity_glow * 0x38 + 0x14, float(1))  # Alpha
+                    pm.write_int(glow_manager + entity_glow * 0x38 + 0x28, 1)           # Enable glow
 
 
 if __name__ == '__main__':
