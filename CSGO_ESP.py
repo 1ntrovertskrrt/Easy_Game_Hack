@@ -9,11 +9,11 @@ m_iTeamNum = (0xF4)
 
 
 def main():
-    print("ESP has launched.")
+    print("Cheat is Activated!.")
     try:
         pm = pymem.Pymem("csgo.exe")
     except:
-        print("Can't find csgo.exe")
+        print("Can't find csgo.exe \nPlease open your game and try again")
         return
 
     client = pymem.process.module_from_name(pm.process_handle, "client.dll").lpBaseOfDll
