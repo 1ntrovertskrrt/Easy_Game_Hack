@@ -1,6 +1,4 @@
 # IMPORTANT!
-This is only example! Don't use this cheat with your real account
-this cheat doesn't have Anti Cheat Bypass
-You may get ban and got VAC Ban on your Steam
+This repository was made for educational purposes only, do not use implemented here features in actual game!
 
-You can run the cheats using python or compile it to exe by yourself!
+You may get vac ban if you use this cheat!
